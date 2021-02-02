@@ -17,6 +17,21 @@ body {
 }
 
 @keyframes rotateZ {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
   to {
     transform: rotateZ(+5deg);
   }
@@ -32,9 +47,11 @@ body {
       color:red;
       font-family: $app-repr-font;
       text-transform: uppercase;
-      
-      animation: rotateZ 5s;
-      
+      rotate: -5deg;
+      animation: rotateZ 0.7s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      letter-spacing: 0.85rem;
       @media only screen and (max-width: $mobile-break-point){
         font-size: $font-size;
       }
