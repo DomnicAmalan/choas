@@ -1,0 +1,63 @@
+@import url('http://fonts.cdnfonts.com/css/pink-chaos');
+
+$mobile-break-point: 320px;
+$ereaders-break-point: 481px;
+$tablets-potrait-break-point: 641px;
+$tablets-landscape-break-point: 801px;
+$laptops-break-point: 1025px;
+$hi-res-break-point: 1281px;
+
+$font-size: 1em;
+$app-repr-font: 'Pink Chaos', sans-serif;
+
+html, 
+body {
+    height: 100%;
+    background-color: black;
+}
+
+@keyframes rotateZ {
+  to {
+    transform: rotateZ(+5deg);
+  }
+}
+
+.app-container{
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100% !important;
+    .welcome-text{
+      color:red;
+      font-family: $app-repr-font;
+      text-transform: uppercase;
+      
+      animation: rotateZ 5s;
+      
+      @media only screen and (max-width: $mobile-break-point){
+        font-size: $font-size;
+      }
+      @media only screen and (min-width: $ereaders-break-point){
+        font-size: $font-size * 2;
+      }
+      @media only screen and (min-width: $tablets-potrait-break-point){
+        font-size: $font-size * 4;
+      }
+      @media only screen and (min-width: $tablets-landscape-break-point){
+        font-size: $font-size * 8;
+      }
+      @media only screen and (min-width: $laptops-break-point){
+        font-size: $font-size * 10;
+      }
+      @media (min-width: $hi-res-break-point) { 
+        font-size: $font-size * 12;
+      }
+    }
+  }
+  .enter-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
