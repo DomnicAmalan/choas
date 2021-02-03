@@ -3,15 +3,16 @@ import "./cyberpunkbutton.scss"
 
 const CyberpunkButton = ({
   title,
-  subtitle
+  subtitle,
+  onPress
 }) => {
   return (
-    <button class="btn btn--secondary">
-      <span class="btn__content">{title}</span>
-      <span class="btn__glitch"></span>
-      <span class="btn__label">{subtitle}</span>
+    <button onClick={onPress} className="btn btn--secondary">
+      <span className="btn__content">{title}</span>
+      <span className="btn__glitch"></span>
+      <span className="btn__label">{subtitle}</span>
     </button>
   )
 }
 
-export {CyberpunkButton}
+export default CyberpunkButton

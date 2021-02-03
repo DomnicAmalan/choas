@@ -1,0 +1,11 @@
+$backgroud-color: #97CDFF;
+
+.analysis-container {
+  background-color: $backgroud-color;
+  height: 95%; 
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

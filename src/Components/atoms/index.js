@@ -1,3 +1,5 @@
-import {CyberpunkButton} from './CyberpunkButton/index'
+import CyberpunkButton from './CyberpunkButton';
+import SearchBar from './SearchBar'
 
-export {CyberpunkButton}
+
+export {CyberpunkButton, SearchBar}

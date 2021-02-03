@@ -10,13 +10,7 @@ $hi-res-break-point: 1281px;
 $font-size: 1em;
 $app-repr-font: 'Pink Chaos', sans-serif;
 
-html, 
-body {
-    height: 100%;
-    background-color: black;
-}
-
-@keyframes rotateZ {
+@keyframes shakeEffect {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
@@ -32,9 +26,9 @@ body {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-  to {
-    transform: rotateZ(+5deg);
-  }
+  // to {
+  //   transform: rotateZ(+5deg);
+  // }
 }
 
 .app-container{
@@ -44,11 +38,11 @@ body {
     justify-content: center;
     height: 100% !important;
     .welcome-text{
-      color:red;
+      color:#ff1e56;
       font-family: $app-repr-font;
       text-transform: uppercase;
       rotate: -5deg;
-      animation: rotateZ 0.7s;
+      animation: shakeEffect 0.7s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       letter-spacing: 0.85rem;
@@ -76,5 +70,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
 }

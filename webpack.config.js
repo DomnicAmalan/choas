@@ -9,7 +9,8 @@ module.exports = {
   entry: "./src/index.js",
   output: { // NEW
     path: path.join(__dirname, 'dist'),
-    filename: "[name].js"
+    filename: "[name].js",
+    publicPath: '/'
   }, // NEW Ends
   plugins: [htmlPlugin],
   module: {
@@ -31,5 +32,8 @@ module.exports = {
         options: { name: '/static/[name].[ext]' }
       }
     ]
-  }
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
 };

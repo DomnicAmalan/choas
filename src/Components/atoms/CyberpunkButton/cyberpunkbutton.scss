@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
 
 :root {
-  --yellow-color: #fcee09; 
-  --red-color: #ff003c;
+  --yellow-color: #d3d5fd; 
+  --red-color: #929aab;
   --black-color: #050a0e;
   --blue-color: #00f0ff;
   --white-color: #fafafa;
+  height: 100%;
 }
 
 .btn {
@@ -41,8 +42,8 @@
 }
 
 .btn--secondary .btn__content {
-  background-color: var(--blue-color);
-  color: var(--white-color);
+  background-color: var(--yellow-color);
+  color: var(--black-color);
 }
 
 .btn__label {
@@ -81,7 +82,7 @@
 .btn:focus .btn__glitch,
 .btn:focus .btn__content::after {
   display: block;
-  animation: glitch-animation 2s linear 0s infinite;
+  animation: glitch-animation 4s;
 }
 
 /* secret trick */
