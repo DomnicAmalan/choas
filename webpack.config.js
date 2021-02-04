@@ -4,9 +4,9 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html", 
   filename: "./index.html"
 });
-
+const PolyFill = '@babel/polyfill'
 module.exports = {
-  entry: "./src/index.js",
+  entry: [PolyFill, "./src/index.js"],
   output: { // NEW
     path: path.join(__dirname, 'dist'),
     filename: "[name].js",
@@ -30,6 +30,16 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         loader: "file-loader",
         options: { name: '/static/[name].[ext]' }
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   },
