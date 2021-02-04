@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import {CyberpunkButton} from '../../Components/atoms/index';
+import {CyberpunkButton, Logo} from '../../Components/atoms/index';
 import "./welcomepages.scss";
 import { useHistory } from "react-router-dom";
 
@@ -12,9 +12,7 @@ const WelcomePage = () => {
 
   return(
     <div className="app-container">
-      <div className="logo-container">
-        <p className="welcome-text">Chaos</p>
-      </div>
+      <Logo />
       <div className="enter-button">
         <CyberpunkButton onPress={enterGame} title={"Enter the Game"} subtitle={"chaos"} />
       </div>

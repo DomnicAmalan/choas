@@ -1,11 +1,32 @@
 $backgroud-color: #97CDFF;
 
+$mobile-break-point: 320px;
+$ereaders-break-point: 481px;
+$tablets-potrait-break-point: 641px;
+$tablets-landscape-break-point: 801px;
+$laptops-break-point: 1025px;
+$hi-res-break-point: 1281px;
+
+$exp: (min-width: 480px) and (min-height: 360px);
+
+$height: 100%;
+
 .analysis-container {
   background-color: $backgroud-color;
-  height: 95%; 
+  height: 100%; 
   margin: 10px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  .logo-container {
+    min-height: 20px;
+    .welcome-text {
+      rotate: 0deg !important;
+    }
+  }
+  .sub-elements {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }

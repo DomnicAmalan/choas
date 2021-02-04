@@ -1,9 +1,39 @@
+$backgroud-color: #97CDFF;
+$mobile-break-point: 320px;
+$ereaders-break-point: 481px;
+$tablets-potrait-break-point: 641px;
+$tablets-landscape-break-point: 801px;
+$laptops-break-point: 1025px;
+$hi-res-break-point: 1281px;
+
+$font-size: 10px;
+$width: 10%;
+
 .search-container {
   background-color: #d3d5fd;
-  width: 30em;
   height: 2em;
   border-radius: 1em;
   display: flex;
   padding-left: 2em;
   align-items: center;
+  justify-content: center;
+  width: $width;
+  @media only screen and (max-width: $mobile-break-point){
+    width: $width*2;
+  }
+  @media only screen and (min-width: $ereaders-break-point){
+    width: $width*3;
+  }
+  @media only screen and (min-width: $tablets-potrait-break-point){
+    width: $width*4;
+  }
+  @media only screen and (min-width: $tablets-landscape-break-point){
+    width: $width*4;
+  }
+  @media only screen and (min-width: $laptops-break-point){
+    width: $width*4;
+  }
+  @media (min-width: $hi-res-break-point) { 
+    width: $width*4;
+  }
 }
