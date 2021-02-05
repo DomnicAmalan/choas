@@ -2,19 +2,23 @@ import React, { useEffect, useState } from 'react';
 import "./listsports.scss";
 import {SearchBar, Logo, SVGViewer} from '../../Components/atoms/index';
 import {SportsListItem} from '../../Components/molecules/index'
-import {allSports} from '../../API/decathalon'
+import {allSports, popularSports} from '../../API/decathalon'
 
 const ListSports = () => {
   const [sportsList, setSportsList] = useState([])
 
   useEffect(() => {
     initialData()
+  
   }, [])
 
   const initialData = async() => {
     const data = await allSports();
+    const locationBasedData = await popularSports();
+    console.log(locationBasedData)
     setSportsList(data)
   }
+
 
   return (
     <div className="analysis-container">
