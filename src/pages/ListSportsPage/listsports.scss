@@ -1,4 +1,4 @@
-$backgroud-color: #97CDFF;
+$backgroud-color: #54426B;
 
 $mobile-break-point: 320px;
 $ereaders-break-point: 481px;
@@ -28,5 +28,13 @@ $height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .popular-sports-view{
+    display: flex;
+    // overflow: scroll;
+    // scrollbar-width: none;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
   }
 }

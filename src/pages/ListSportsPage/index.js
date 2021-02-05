@@ -1,24 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./listsports.scss";
-import {SearchBar, Logo} from '../../Components/atoms/index';
+import {SearchBar, Logo, SVGViewer} from '../../Components/atoms/index';
+import {SportsListItem} from '../../Components/molecules/index'
 import {allSports} from '../../API/decathalon'
 
 const ListSports = () => {
+  const [sportsList, setSportsList] = useState([])
 
   useEffect(() => {
-    const data = async() => {
-      const data = await allSports()
-      console.log(data)
-    }
-    data()
+    initialData()
   }, [])
+
+  const initialData = async() => {
+    const data = await allSports();
+    setSportsList(data)
+  }
 
   return (
     <div className="analysis-container">
       <div className="sub-elements">
         <Logo />
-        <div>
-          <p>Popular games</p>
+        <div className="popular-sports-view">
+          <SportsListItem data={sportsList} />
         </div>
         <SearchBar />
       </div>

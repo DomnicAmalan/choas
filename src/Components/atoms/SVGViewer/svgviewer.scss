@@ -1,0 +1,21 @@
+@import url('http://fonts.cdnfonts.com/css/fredoka-one');
+
+$svg-font: 'Fredoka One', sans-serif;
+
+.svg-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  .svg-view {
+    height: 50%;
+    width: 100px;
+    filter:  invert(73%) sepia(90%) saturate(381%) hue-rotate(356deg) brightness(96%) contrast(91%);
+  }
+  .svg-text{
+    font-family: $svg-font;
+    color: #dddddd;
+  }
+}

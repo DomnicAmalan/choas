@@ -1,0 +1,7 @@
+.popular-sports-list {
+  display: flex;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  // max-width: 50%;
+}
