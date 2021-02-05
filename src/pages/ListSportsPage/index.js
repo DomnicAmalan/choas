@@ -9,7 +9,6 @@ const ListSports = () => {
 
   useEffect(() => {
     initialData()
-  
   }, [])
 
   const initialData = async() => {
@@ -21,6 +20,7 @@ const ListSports = () => {
 
 
   return (
+    // TODO
     <div className="analysis-container">
       <div className="sub-elements">
         <Logo />
