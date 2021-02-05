@@ -1,7 +1,9 @@
 .popular-sports-list {
   display: flex;
-  overflow: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;
-  max-width: 50%;
+  max-width: 30%;
+  flex-direction: row;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

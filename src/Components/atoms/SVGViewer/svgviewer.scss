@@ -12,11 +12,17 @@ $svg-font: 'Fredoka One', sans-serif;
   padding: 10px;
   margin: 5px;
   .svg-view {
-    height: 50%;
-    width: 100px;
+    // height: 50%;
+    // width: 50%;
+    font-size: 2px;
   }
-  .svg-text{
-    font-family: $svg-font;
-    color: #333333;
+  .svg-text-wrapper{
+    overflow-wrap: break-word;
+    .svg-text{
+      font-family: $svg-font;
+      color: #333333;
+      font-size: 8px;
+    }
   }
+  
 }

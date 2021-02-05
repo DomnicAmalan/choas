@@ -3,12 +3,12 @@ import {SVGViewer} from '../../atoms/index'
 import "./popularsportslist.scss"
 
 const SportsListItem = ({data}) => {
-  
   return(
     <div className="popular-sports-list">
       {data.map((item) => (
-        item.attributes.icon?
-        <SVGViewer attributes={item.attributes} />: null
+        // item.attributes.icon?
+        <SVGViewer attributes={item.attributes} />
+        // : null
       ))}
     </div>
   )

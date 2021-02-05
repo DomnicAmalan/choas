@@ -20,9 +20,7 @@ const ListSports = () => {
     <div className="analysis-container">
       <div className="sub-elements">
         <Logo />
-        <div className="popular-sports-view">
-          <SportsListItem data={sportsList} />
-        </div>
+        <SportsListItem data={sportsList} />
         <SearchBar />
       </div>
     </div>
