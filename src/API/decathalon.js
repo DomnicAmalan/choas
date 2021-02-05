@@ -1,17 +1,17 @@
-import Axios from 'axios'
+import Axios from 'axios';
 
 const DecathalonInstance = Axios.create({
-  baseURL: "https://sports.api.decathlon.com",
-})
+  baseURL: 'https://sports.api.decathlon.com',
+});
 
-export const allSports  = async() => {
-  let {data} = await DecathalonInstance.get('/sports')
-  return data.data
-}
+export const allSports = async () => {
+  const { data } = await DecathalonInstance.get('/sports');
+  return data.data;
+};
 
-export const locationBasedSports = async(coordinates) => {
-  let {data} = await DecathalonInstance.get(
-    '/sports/recommendations/geolocation', {params: {coordinates: "102.5528,14.2350"}}
-  )
-  return data
-}
+export const locationBasedSports = async (coordinates) => {
+  const { data } = await DecathalonInstance.get(
+    '/sports/recommendations/geolocation', { params: { coordinates: '102.5528,14.2350' } },
+  );
+  return data;
+};

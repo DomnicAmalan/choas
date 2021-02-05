@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import "./listsports.scss";
-import {SearchBar, Logo, SVGViewer} from '../../Components/atoms/index';
-import {SportsListItem} from '../../Components/molecules/index'
-import {allSports, locationBasedSports} from '../../API/decathalon'
+import './listsports.scss';
+import { SearchBar, Logo, SVGViewer } from '../../Components/atoms/index';
+import { SportsListItem } from '../../Components/molecules/index';
+import { allSports, locationBasedSports } from '../../API/decathalon';
 
 const ListSports = () => {
-  const [sportsList, setSportsList] = useState([])
+  const [sportsList, setSportsList] = useState([]);
 
   useEffect(() => {
-    initialData()
-  }, [])
+    initialData();
+  }, []);
 
-  const initialData = async() => {
+  const initialData = async () => {
     const data = await allSports();
     const locationBasedData = await locationBasedSports();
-    console.log(locationBasedData)
-    setSportsList(data)
-  }
-
+    console.log(locationBasedData);
+    setSportsList(data);
+  };
 
   return (
     // TODO
@@ -28,7 +27,7 @@ const ListSports = () => {
         <SearchBar />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ListSports
+export default ListSports;
