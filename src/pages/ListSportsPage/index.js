@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./listsports.scss";
 import {SearchBar, Logo, SVGViewer} from '../../Components/atoms/index';
 import {SportsListItem} from '../../Components/molecules/index'
-import {allSports, popularSports} from '../../API/decathalon'
+import {allSports, locationBasedSports} from '../../API/decathalon'
 
 const ListSports = () => {
   const [sportsList, setSportsList] = useState([])
@@ -14,7 +14,7 @@ const ListSports = () => {
 
   const initialData = async() => {
     const data = await allSports();
-    const locationBasedData = await popularSports();
+    const locationBasedData = await locationBasedSports();
     console.log(locationBasedData)
     setSportsList(data)
   }
