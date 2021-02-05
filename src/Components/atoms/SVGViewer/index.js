@@ -3,7 +3,7 @@ import "./svgviewer.scss";
 import {getRandom} from '../../helpers/filterColorGen'
 
 const SVGViewer = ({attributes}) => {
-
+  console.log("YYY")
   let filters = getRandom("color")  
   return (
     <div className="svg-wrapper">
