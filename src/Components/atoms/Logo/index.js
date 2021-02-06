@@ -1,13 +1,10 @@
 import React from 'react';
-import "./logo.scss"
+import './logo.scss';
 
-const Logo = () => {
+const Logo = () => (
+  <div className="logo-container">
+    <p className="welcome-text">Chaos</p>
+  </div>
+);
 
-  return (
-      <div className="logo-container">
-        <p className="welcome-text">Chaos</p>
-      </div>
-  )
-}
-
-export default Logo
+export default Logo;

@@ -1,3 +1,3 @@
-import SportsListItem from './PopularSportsListView'
+import SportsListItem from './PopularSportsListView';
 
-export {SportsListItem}
+export { SportsListItem };
