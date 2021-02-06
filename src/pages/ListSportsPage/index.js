@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './listsports.scss';
-import { SearchBar, Logo, SVGViewer } from '../../Components/atoms/index';
+import { SearchBar, Logo } from '../../Components/atoms/index';
 import { SportsListItem } from '../../Components/molecules/index';
 import { allSports, locationBasedSports } from '../../API/decathalon';
 

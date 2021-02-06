@@ -151,7 +151,7 @@ class Color {
 }
 
 class Solver {
-  constructor(target, baseColor) {
+  constructor(target) {
     this.target = target;
     this.targetHSL = target.hsl();
     this.reusedColor = new Color(0, 0, 0);
@@ -273,7 +273,6 @@ class Solver {
     function fmt(idx, multiplier = 1) {
       return Math.round(filters[idx] * multiplier);
     }
-    const data = `invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)`;
     return `invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${100}%) contrast(${fmt(5)}%)`;
   }
 }
