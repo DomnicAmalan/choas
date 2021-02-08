@@ -8,14 +8,16 @@ const App = () => {
     <BrowserRouter>
       <Switch>
       <Redirect exact from="/" to="/welcome" />
-        {indexRoutes.map(({ routes }) =>
+        {indexRoutes.map(({ layout: Layout, routes }) =>
           routes.map(({ path, exact, component: Component }) => (
             <Route
               key={path}
               path={path}
               exact={exact}
               render={(props) => (
-                <Component {...props} />
+                <Layout>
+                  <Component {...props} />
+                </Layout>
               )}
             ></Route>
           ))
