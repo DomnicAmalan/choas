@@ -4,6 +4,7 @@ import {
   BrowserRouter, Switch, Route, Redirect,
 } from 'react-router-dom';
 import indexRoutes from './routes';
+import { withTranslation } from 'react-i18next';
 
 const App = () => (
   <BrowserRouter>
@@ -23,4 +24,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-export default App;
+export default withTranslation()(App);
