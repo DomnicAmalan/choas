@@ -1,23 +1,17 @@
-import React from 'react';
-// import {CyberpunkButton, Logo} from '../../Components/atoms/index';
-import { GlobeMap } from '../../Components/molecules/index'
+import React, { useContext } from 'react';
 import "./welcomepages.scss";
-// import { useHistory } from "react-router-dom";
+import { ThemeContext } from '../../hooks/index'
 
 const WelcomePage = () => {
-  // const history = useHistory();
 
-  // const enterGame = useCallback(() => {
-  //   history.push('/analysis');
-  // });
+  const {toggle, theme} = useContext(ThemeContext)
+  console.log(theme, toggle)
 
   return (
     <div className="app-container">
-      <GlobeMap />
-      {/* <Logo /> */}
-      {/* <div className="enter-button">
-        <CyberpunkButton onPress={enterGame} title={"Enter the Game"} subtitle={"chaos"} />
-      </div> */}
+      <div onClick={() => toggle()}>
+        TTTTT
+      </div>
     </div>
   );
 };
