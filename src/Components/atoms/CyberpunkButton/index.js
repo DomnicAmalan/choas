@@ -1,18 +1,16 @@
 import React from 'react';
-import "./cyberpunkbutton.scss"
+import './cyberpunkbutton.scss';
 
 const CyberpunkButton = ({
   title,
   subtitle,
-  onPress
-}) => {
-  return (
-    <button onClick={onPress} className="btn btn--secondary">
-      <span className="btn__content">{title}</span>
-      <span className="btn__glitch"></span>
-      <span className="btn__label">{subtitle}</span>
-    </button>
-  )
-}
+  onPress,
+}) => (
+  <button onClick={onPress} className="btn btn--secondary">
+    <span className="btn__content">{title}</span>
+    <span className="btn__glitch" />
+    <span className="btn__label">{subtitle}</span>
+  </button>
+);
 
-export default CyberpunkButton
+export default CyberpunkButton;

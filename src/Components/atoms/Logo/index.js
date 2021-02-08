@@ -1,5 +1,5 @@
 import React from 'react';
-import "./logo.scss"
+import './logo.scss';
 
 const Logo = ({animated=true}) => {
   console.log(animated)

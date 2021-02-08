@@ -1,17 +1,17 @@
-import React, { useCallback } from 'react';
-import {CyberpunkButton, Logo} from '../../Components/atoms/index';
+import React from 'react';
+// import {CyberpunkButton, Logo} from '../../Components/atoms/index';
 import { GlobeMap } from '../../Components/molecules/index'
 import "./welcomepages.scss";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 const WelcomePage = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const enterGame = useCallback(() => {
-    history.push("/analysis")
-  })
+  // const enterGame = useCallback(() => {
+  //   history.push('/analysis');
+  // });
 
-  return(
+  return (
     <div className="app-container">
       <GlobeMap />
       {/* <Logo /> */}
@@ -19,7 +19,7 @@ const WelcomePage = () => {
         <CyberpunkButton onPress={enterGame} title={"Enter the Game"} subtitle={"chaos"} />
       </div> */}
     </div>
-  )
-}
+  );
+};
 
 export default WelcomePage;
