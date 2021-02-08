@@ -1,4 +1,7 @@
+$background-main: #000000;
+$background-main-1: #FFFFFF;
+
 html, body, #root, .App {
   height: 100%;
-  background-color: #D9D9D9;
+  background-color: $background-main;
 }

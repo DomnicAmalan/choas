@@ -1,3 +1,4 @@
-import SportsListItem from './PopularSportsListView'
+import SportsListItem from './PopularSportsListView';
+import GlobeMap from './GlobeMap'
 
-export {SportsListItem}
+export {SportsListItem, GlobeMap}
