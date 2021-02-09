@@ -15,9 +15,9 @@ const App = () => {
               path={path}
               exact={exact}
               render={(props) => (
-                <Layout>
+                // <Layout>
                   <Component {...props} />
-                </Layout>
+                // </Layout>
               )}
             ></Route>
           ))
