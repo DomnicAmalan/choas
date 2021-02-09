@@ -10,7 +10,7 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Redirect exact from="/" to="/welcome" />
-        {indexRoutes.map(({ layout: Layout, routes }) =>
+        {indexRoutes.map(({ routes }) =>
           routes.map(({ path, exact, component: Component }) => (
             <Route
               key={path}

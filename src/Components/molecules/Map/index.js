@@ -10,23 +10,6 @@ const Map = () => {
     const map = new MapBox.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v10',
-
-      // center: [5, 34],
-      // style: {
-      //   version: 8,
-      //   sources: {
-      //     osm: {
-      //       type: 'raster',
-      //       tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
-      //       tileSize: 256,
-      //     }
-      //   },
-      //   layers: [{
-      //     id: 'osm',
-      //     type: 'raster',
-      //     source: 'osm',
-      //   }],
-      // }
     });
   }, [])
 
