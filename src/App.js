@@ -1,12 +1,14 @@
 import React from 'react';
 // import "./app.scss";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import indexRoutes from "./routes";
+import {
+  BrowserRouter, Switch, Route, Redirect,
+} from 'react-router-dom';
+import indexRoutes from './routes';
+import { withTranslation } from 'react-i18next';
 
-const App = () => {
-  return(
-    <BrowserRouter>
-      <Switch>
+const App = () => (
+  <BrowserRouter>
+    <Switch>
       <Redirect exact from="/" to="/welcome" />
         {indexRoutes.map(({ layout: Layout, routes }) =>
           routes.map(({ path, exact, component: Component }) => (
@@ -24,7 +26,7 @@ const App = () => {
         )}
       </Switch>
     </BrowserRouter>
-  )
-}
+)
 
-export default App;
+
+export default withTranslation()(App);

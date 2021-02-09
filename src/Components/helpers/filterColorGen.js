@@ -1,10 +1,8 @@
-'use strict';
-
 class Color {
   constructor(r, g, b) {
     this.set(r, g, b);
   }
-  
+
   toString() {
     return `rgb(${Math.round(this.r)}, ${Math.round(this.g)}, ${Math.round(this.b)})`;
   }
@@ -87,6 +85,7 @@ class Color {
   brightness(value = 1) {
     this.linear(value);
   }
+
   contrast(value = 1) {
     this.linear(value, -(0.5 * value) + 0.5);
   }
@@ -110,7 +109,8 @@ class Color {
     const b = this.b / 255;
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
+    let h; let s; const
+      l = (max + min) / 2;
 
     if (max === min) {
       h = s = 0;
@@ -151,7 +151,7 @@ class Color {
 }
 
 class Solver {
-  constructor(target, baseColor) {
+  constructor(target) {
     this.target = target;
     this.targetHSL = target.hsl();
     this.reusedColor = new Color(0, 0, 0);
@@ -260,12 +260,12 @@ class Solver {
 
     const colorHSL = color.hsl();
     return (
-      Math.abs(color.r - this.target.r) +
-      Math.abs(color.g - this.target.g) +
-      Math.abs(color.b - this.target.b) +
-      Math.abs(colorHSL.h - this.targetHSL.h) +
-      Math.abs(colorHSL.s - this.targetHSL.s) +
-      Math.abs(colorHSL.l - this.targetHSL.l)
+      Math.abs(color.r - this.target.r)
+      + Math.abs(color.g - this.target.g)
+      + Math.abs(color.b - this.target.b)
+      + Math.abs(colorHSL.h - this.targetHSL.h)
+      + Math.abs(colorHSL.s - this.targetHSL.s)
+      + Math.abs(colorHSL.l - this.targetHSL.l)
     );
   }
 
@@ -273,7 +273,6 @@ class Solver {
     function fmt(idx, multiplier = 1) {
       return Math.round(filters[idx] * multiplier);
     }
-    let data = `invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)`
     return `invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${100}%) contrast(${fmt(5)}%)`;
   }
 }
@@ -281,9 +280,7 @@ class Solver {
 function hexToRgb(hex) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, (m, r, g, b) => {
-    return r + r + g + g + b + b;
-  });
+  hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
 
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
@@ -301,11 +298,11 @@ function hexToRgb(hex) {
 // return result.filter
 
 export const getRandom = () => {
-  let color =  (Math.random() * 0xfffff * 1000000).toString(16);
-  color = '#' + color.slice(0, 6)
-  const RGB = hexToRgb(color)
+  let color = (Math.random() * 0xfffff * 1000000).toString(16);
+  color = `#${color.slice(0, 6)}`;
+  const RGB = hexToRgb(color);
   const Main = new Color(RGB[0], RGB[1], RGB[2]);
   const solver = new Solver(Main);
   const result = solver.solve();
-  return {filter: result.filter, hex: color}
-}
+  return { filter: result.filter, hex: color };
+};

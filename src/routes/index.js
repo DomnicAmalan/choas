@@ -7,9 +7,9 @@ const listRoutes = [
     layout: GuestLayout,
     routes: [
       ...AppRoute,
-      ...AnalysisRoute
-    ]
-  }
-]
+      ...AnalysisRoute,
+    ],
+  },
+];
 
 export default listRoutes;

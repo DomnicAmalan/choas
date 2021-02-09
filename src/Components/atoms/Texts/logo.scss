@@ -1,5 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/pink-chaos');
-@import url('http://fonts.cdnfonts.com/css/sf-sports-night');
+@import url('http://fonts.cdnfonts.com/css/sf-sports-night'); 
 
 $mobile-break-point: 320px;
 $ereaders-break-point: 481px;
@@ -10,22 +10,18 @@ $hi-res-break-point: 1281px;
 
 $font-size: 1em;
 $app-repr-font: 'Pink Chaos', sans-serif;
-$app-repr-font-main: 'SF Sports Night', sans-serif;
+$app-repr-font-main: 'SF Sports Night', sans-serif; 
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100% !important;
   .welcome-text{
-    color:#ff1e56;
+    color:#FFB303;
     font-family: $app-repr-font-main;
     text-transform: uppercase;
-    rotate: -5deg;
     animation: shakeEffect 0.7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     letter-spacing: 0.85rem;
+    font-style: italic;
     @media only screen and (max-width: $mobile-break-point){
       font-size: $font-size;
     }

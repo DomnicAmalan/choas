@@ -1,19 +1,14 @@
-import React, { useCallback } from 'react';
-import {CyberpunkButton, Logo} from '../../Components/atoms/index';
+import React from 'react';
 import "./welcomepages.scss";
 import { useHistory } from "react-router-dom";
-import { Map } from '../../Components/molecules/index'
+import {LoginTemplate} from '../../templates/index'
 
 const WelcomePage = () => {
   const history = useHistory();
 
   return(
     <div className="app-container">
-      <Map />
-      {/* <Logo />
-      <div className="enter-button">
-        <CyberpunkButton onPress={enterGame} title={"Enter the Game"} subtitle={"chaos"} />
-      </div> */}
+      <LoginTemplate />
     </div>
   )
 }

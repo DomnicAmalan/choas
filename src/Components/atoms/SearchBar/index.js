@@ -1,12 +1,10 @@
 import React from 'react';
-import "./searchbar.scss"
+import './searchbar.scss';
 
-const SearchBar = () => {
-  return(
-    <div className="search-container">
-      TT
-    </div>
-  )
-}
+const SearchBar = () => (
+  <div className="search-container">
+    TT
+  </div>
+);
 
-export default SearchBar
+export default SearchBar;
