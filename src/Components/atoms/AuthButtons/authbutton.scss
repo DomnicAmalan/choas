@@ -1,0 +1,21 @@
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+$font:  'Helvetica 65 Medium', sans-serif;
+
+.auth-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+  .auth-button-text {
+    font-family: $font;
+    font-size: 1.5vh;
+    font-weight: 500;
+  }
+}

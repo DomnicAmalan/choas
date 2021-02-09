@@ -10,18 +10,23 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Redirect exact from="/" to="/welcome" />
-      {indexRoutes.map(({ routes }) => routes.map(({ path, exact, component: Component }) => (
-        <Route
-          key={path}
-          path={path}
-          exact={exact}
-          render={(props) => (
-            <Component {...props} />
-          )}
-        />
-      )))}
-    </Switch>
-  </BrowserRouter>
-);
+        {indexRoutes.map(({ layout: Layout, routes }) =>
+          routes.map(({ path, exact, component: Component }) => (
+            <Route
+              key={path}
+              path={path}
+              exact={exact}
+              render={(props) => (
+                // <Layout>
+                  <Component {...props} />
+                // </Layout>
+              )}
+            ></Route>
+          ))
+        )}
+      </Switch>
+    </BrowserRouter>
+)
+
 
 export default withTranslation()(App);

@@ -1,4 +1,5 @@
 import SportsListItem from './PopularSportsListView';
-import GlobeMap from './GlobeMap'
+import Map from './Map';
+import SocialAuths from './SocialAuths'
 
-export {SportsListItem, GlobeMap}
+export {SportsListItem, Map, SocialAuths}

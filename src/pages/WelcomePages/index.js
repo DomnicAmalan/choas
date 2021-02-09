@@ -1,15 +1,16 @@
 import React from 'react';
 import "./welcomepages.scss";
+import { useHistory } from "react-router-dom";
+import {LoginTemplate} from '../../templates/index'
 
 const WelcomePage = () => {
+  const history = useHistory();
 
-  // const {toggle, theme} = useContext(ThemeContext);
-  // const {t, i18n} = useTranslation();
-  return (
+  return(
     <div className="app-container">
-      
+      <LoginTemplate />
     </div>
-  );
-};
+  )
+}
 
 export default WelcomePage;
