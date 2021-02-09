@@ -2,7 +2,7 @@ import React from 'react'
 import "./authbutton.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const AuthButtons = ({provider, title, icon,style}) => {
+const AuthButtons = ({ title, icon,style}) => {
   return (
     <div className="auth-button-container">
       <FontAwesomeIcon style={style} className="icon" icon={icon} />

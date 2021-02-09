@@ -3,7 +3,7 @@ import "./guestlayout.scss";
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content} = Layout;
 
-const GuestLayout = ({children}) => {
+const GuestLayout = () => {
   return (
     <Layout>
     <Header className="header">
