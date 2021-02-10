@@ -11,17 +11,14 @@ const SocialAuths = () => {
   return (
     <div className="social-auth-container">
       <div className="items">
-      <AuthButtons provider={"google"} title={t('authbuttons.google.title')} icon={faGoogle} />
+        <AuthButtons provider={"google"} title={t('authbuttons.google.title')} icon={faGoogle} />
       </div>
       <div className="items">
-      <AuthButtons provider={"facebook"} title={t('authbuttons.facebook.title')} icon={faFacebook} style={{color: "#4267B2"}} />
+        <AuthButtons provider={"facebook"} title={t('authbuttons.facebook.title')} icon={faFacebook} style={{color: "#4267B2"}} />
       </div>
       <div className="items">
-      <AuthButtons provider={"snapchat"} title={t('authbuttons.snapchat.title')} icon={faSnapchatGhost} style={{color: "#FFFC00"}} />
+        <AuthButtons provider={"snapchat"} title={t('authbuttons.snapchat.title')} icon={faSnapchatGhost} style={{color: "#FFFC00"}} />
       </div>
-      
-      
-      
     </div>
   )
 }

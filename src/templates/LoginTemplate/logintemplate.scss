@@ -1,19 +1,26 @@
 .login-template-container {
-  width: 100%;
-  height: 90%;
+  width: 40%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
-  // flex-direction: column;
   background-color:#FEFEFE;
   margin: 30px;
   border-radius: 2em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  z-index: 1;
+  padding-left: 10px;
+  // background-image: url("https://picsum.photos/1280");
+  // background-color: #cccccc;
   .items {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
+  }
+  .logo-item {
+    display: inline;
+    text-align: center;
   }
 }

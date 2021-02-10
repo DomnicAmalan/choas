@@ -8,7 +8,7 @@ $tablets-landscape-break-point: 801px;
 $laptops-break-point: 1025px;
 $hi-res-break-point: 1281px;
 
-$font-size: 1em;
+$font-size: 0.85em;
 $app-repr-font: 'Pink Chaos', sans-serif;
 $app-repr-font-main: 'SF Sports Night', sans-serif; 
 
@@ -32,13 +32,13 @@ $app-repr-font-main: 'SF Sports Night', sans-serif;
       font-size: $font-size * 4;
     }
     @media only screen and (min-width: $tablets-landscape-break-point){
-      font-size: $font-size * 8;
+      font-size: $font-size * 4;
     }
     @media only screen and (min-width: $laptops-break-point){
-      font-size: $font-size * 10;
+      font-size: $font-size * 4;
     }
     @media (min-width: $hi-res-break-point) { 
-      font-size: $font-size * 12;
+      font-size: $font-size * 8;
     }
   }
 }
