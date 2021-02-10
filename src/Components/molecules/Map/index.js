@@ -1,11 +1,12 @@
 import MapBox from 'mapbox-gl'
 import React, { useEffect, useRef } from 'react';
-import "./map.scss"
+import "./map.scss";
+import {MAPBOX_ACCESS_TOKEN} from '../../../helpers/envGetter'
 
 const Map = () => {
   const mapContainer = useRef();
   useEffect(() => {
-    MapBox.accessToken = "pk.eyJ1IjoiZG9tbmljYW1hbGFuIiwiYSI6ImNra3hkM3dyajF6dzYyb3BjM3UyZ2F3eWQifQ.5CyQIRPCT3irnbNAv9CW7Q"
+    MapBox.accessToken = MAPBOX_ACCESS_TOKEN
     const map = new MapBox.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/domnicamalan/ckkxdjzw50fzm17pp20s5z918',

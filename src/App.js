@@ -6,6 +6,8 @@ import {
 import indexRoutes from './routes';
 import { withTranslation } from 'react-i18next';
 
+// console.log(process.env)
+
 const App = () => (
   <BrowserRouter>
     <Switch>
