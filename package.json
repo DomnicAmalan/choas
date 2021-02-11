@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node server/index.js",
+    "build": "webpack",
     "start": "webpack serve --mode development --watch",
     "test:all": "set CI=true && react-scripts test && npm run lint",
     "lint": "eslint --fix . && echo 'Lint complete.'",
