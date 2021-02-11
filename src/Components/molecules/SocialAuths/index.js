@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import {
   faSnapchatGhost,
   faGoogle,
-  faFacebook,
+  faFacebookSquare,
+  faSnapchatSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { AuthButtons } from '../../atoms/index';
 
@@ -19,13 +20,14 @@ const SocialAuths = () => {
           provider="google"
           title={t('authbuttons.google.title')}
           icon={faGoogle}
+          style={{ color: '#15AABF' }}
         />
       </div>
       <div className="items">
         <AuthButtons
           provider="facebook"
           title={t('authbuttons.facebook.title')}
-          icon={faFacebook}
+          icon={faFacebookSquare}
           style={{ color: '#4267B2' }}
         />
       </div>
@@ -33,8 +35,8 @@ const SocialAuths = () => {
         <AuthButtons
           provider="snapchat"
           title={t('authbuttons.snapchat.title')}
-          icon={faSnapchatGhost}
-          style={{ color: '#FFFC00' }}
+          icon={faSnapchatSquare}
+          style={{ color: 'black' }}
         />
       </div>
     </div>

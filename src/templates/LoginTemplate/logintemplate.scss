@@ -1,6 +1,6 @@
 .login-template-container {
-  width: 40%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +28,7 @@
     width: auto;
     border-radius: 1em;
     scrollbar-width: none;
+    height: auto;
   }
   .items {
     display: flex;
