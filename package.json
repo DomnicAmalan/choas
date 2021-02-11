@@ -7,8 +7,9 @@
     "build": "node server/index.js",
     "start": "webpack serve --mode development --watch",
     "test:all": "set CI=true && react-scripts test && npm run lint",
-    "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
-    "lint:fix": "eslint 'src/**/*.{js,jsx}' --quiet --fix"
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "lint:fix": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "",
@@ -28,24 +29,31 @@
     "react-lottie": "^1.2.3",
     "react-router-dom": "^5.2.0",
     "three": "^0.125.2",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
     "husky": "^4.3.8",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.19.0",
@@ -54,7 +62,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint:fix",
-      "pre-push": "npm run lint"
+      "pre-push": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
