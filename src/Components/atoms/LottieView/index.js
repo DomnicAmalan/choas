@@ -1,24 +1,18 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import * as animationData from '../../../assets/logo.json'
+import * as animationData from '../../../assets/logo.json';
 
 const LottieView = () => {
   const defaultOptions = {
     loop: true,
-    autoplay: true, 
-    animationData: animationData,
+    autoplay: true,
+    animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   };
 
-  return (
-    <Lottie 
-      height={100}
-      width={100}
-      options={defaultOptions}
-    />
-  )
-}
+  return <Lottie height={100} width={100} options={defaultOptions} />;
+};
 
-export  default LottieView
+export default LottieView;

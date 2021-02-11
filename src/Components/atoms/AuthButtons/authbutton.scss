@@ -26,30 +26,56 @@ $font-size: 6px;
   .auth-button-text {
     font-family: $font;
     font-size: $font-size;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     align-self: center;
     letter-spacing: 0.4px;
+    @media only screen and (max-width: 205px) {
+      display: none;
+      width: 0px;
+    }
     @media only screen and (max-width: $mobile-break-point){
-      font-size: $font-size/3;
+      font-size: ($font-size) - 2;
     }
     @media only screen and (min-width: $ereaders-break-point){
-      font-size: $font-size/2;
+      font-size: ($font-size) - 2;;
     }
     @media only screen and (min-width: $tablets-potrait-break-point){
-      font-size: $font-size;
+      font-size: ($font-size) - 1;
     }
     @media only screen and (min-width: $tablets-landscape-break-point){
-      font-size: $font-size;
+      font-size: ($font-size) - 1;
     }
     @media only screen and (min-width: $laptops-break-point){
       font-size: $font-size;
     }
     @media (min-width: $hi-res-break-point) { 
-      font-size: $font-size * 2;
+      font-size: ($font-size) + 2;
     }
   }
   .icon {
+    $icon-font-szie: 20px;
     padding-right: 1vh;
+    @media only screen and (max-width: 205px) {
+      font-size: ($icon-font-szie) - 14;
+    }
+    @media only screen and (max-width: $mobile-break-point){
+      font-size: ($icon-font-szie) - 10;
+    }
+    @media only screen and (min-width: $ereaders-break-point){
+      font-size: ($icon-font-szie) - 8;
+    }
+    @media only screen and (min-width: $tablets-potrait-break-point){
+      font-size: ($icon-font-szie) - 6;
+    }
+    @media only screen and (min-width: $tablets-landscape-break-point){
+      font-size: ($icon-font-szie) - 4;
+    }
+    @media only screen and (min-width: $laptops-break-point){
+      font-size: ($icon-font-szie);
+    }
+    @media (min-width: $hi-res-break-point) { 
+      font-size: ($icon-font-szie);
+    }
   }
 }

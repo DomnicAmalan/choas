@@ -1,9 +1,10 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const PolyFill = '@babel/polyfill';
-const webpack = require('webpack')
 
-var dotenv = require('dotenv').config({path: __dirname + '/.env'});
+const PolyFill = '@babel/polyfill';
+const webpack = require('webpack');
+
+const dotenv = require('dotenv').config({ path: `${__dirname}/.env` });
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -11,12 +12,13 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 const dotEnvPlugin = new webpack.DefinePlugin({
-  "process.env": JSON.stringify(dotenv.parsed)
-})
+  'process.env': JSON.stringify(dotenv.parsed),
+});
 
 module.exports = {
   entry: [PolyFill, './src/index.js'],
-  output: { // NEW
+  output: {
+    // NEW
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
     publicPath: '/',
