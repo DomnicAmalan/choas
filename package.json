@@ -9,7 +9,8 @@
     "test:all": "set CI=true && react-scripts test && npm run lint",
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "lint:fix": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
-    "release": "standard-version"
+    "release": "standard-version",
+    "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
   },
   "keywords": [],
   "author": "",
@@ -52,7 +53,6 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
     "husky": "^4.3.8",
-    "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
@@ -70,6 +70,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
+  }
 }
