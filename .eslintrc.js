@@ -25,6 +25,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'linebreak-style': ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
   },
 };

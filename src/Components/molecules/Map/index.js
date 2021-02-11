@@ -11,7 +11,6 @@ const Map = () => {
     longitude: 30.5,
   });
   const { t, i18n } = useTranslation();
-  console.log(t, i18n.language);
   useEffect(() => {
     MapBox.accessToken = MAPBOX_ACCESS_TOKEN;
     // getCurrentLoc()
