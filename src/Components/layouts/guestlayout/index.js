@@ -1,11 +1,11 @@
 import React from 'react';
-import "./guestlayout.scss";
+import './guestlayout.scss';
 import { Layout, Menu, Breadcrumb } from 'antd';
-const { Header, Content} = Layout;
 
-const GuestLayout = () => {
-  return (
-    <Layout>
+const { Header, Content } = Layout;
+
+const GuestLayout = () => (
+  <Layout>
     <Header className="header">
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
@@ -26,7 +26,7 @@ const GuestLayout = () => {
           style={{
             padding: 24,
             margin: 0,
-            minHeight: "100%",
+            minHeight: '100%',
           }}
         >
           Content
@@ -34,7 +34,6 @@ const GuestLayout = () => {
       </Layout>
     </Layout>
   </Layout>
-  )
-} 
+);
 
-export default GuestLayout
+export default GuestLayout;

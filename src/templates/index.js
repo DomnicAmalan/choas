@@ -1,3 +1,3 @@
-import LoginTemplate from './LoginTemplate'
+import LoginTemplate from './LoginTemplate';
 
-export {LoginTemplate}
+export { LoginTemplate };

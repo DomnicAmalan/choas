@@ -11,7 +11,10 @@ export const allSports = async () => {
 
 export const locationBasedSports = async () => {
   const { data } = await DecathalonInstance.get(
-    '/sports/recommendations/geolocation', { params: { coordinates: '102.5528,14.2350' } },
+    '/sports/recommendations/geolocation',
+    {
+      params: { coordinates: '102.5528,14.2350' },
+    }
   );
   return data;
 };

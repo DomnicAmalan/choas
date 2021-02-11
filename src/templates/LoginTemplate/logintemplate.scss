@@ -11,16 +11,28 @@
   transition: 0.3s;
   z-index: 1;
   padding-left: 10px;
-  // background-image: url("https://picsum.photos/1280");
-  // background-color: #cccccc;
+  @media only screen and (max-height: 550px){
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border-radius: 1em;
+    scrollbar-width: none;
+  }
+  @media only screen and (max-width: 600px){
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border-radius: 1em;
+    scrollbar-width: none;
+  }
   .items {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
-  }
-  .logo-item {
-    display: inline;
-    text-align: center;
+    width: 100%;
   }
 }
