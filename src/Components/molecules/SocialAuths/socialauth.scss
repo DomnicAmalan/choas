@@ -1,9 +1,21 @@
+$font-size: 1vh;
 .social-auth-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   .items{
+    display: flex;
     width: 100%;
     padding-bottom: 5px;
+    padding-right: 10px;
+    @media only screen and (max-width: 205px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: --mobile-break-point){
+      width: 50%;
+    }
+    @media only screen and (min-width: --ereaders-break-point){
+      width: 50%;
+    }
   }
 }

@@ -7,9 +7,7 @@ const LoginTemplate = () => {
   
   return (
     <div className="login-template-container">
-      <div className="items logo-item">
-        {/* <img src={require('../../assets/logo.svg')} width={60} height={60} /> */}
-        {/* <LottieView url={"https://assets9.lottiefiles.com/packages/lf20_mJJGAz.json"}/> */}
+      <div className="items">
         <Logo style={{fontSize: "8px"}} />
       </div>
       <div className="items">

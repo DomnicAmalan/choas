@@ -1,4 +1,11 @@
-
+:root {
+  --mobile-break-point: 320px;
+  --ereaders-break-point: 481px;
+  --tablets-potrait-break-point: 641px;
+  --tablets-landscape-break-point: 801px;
+  --laptops-break-point: 1025px;
+  --hi-res-break-point: 1281px;
+}
 
 html, body, #root, .App {
   height: 100%;
