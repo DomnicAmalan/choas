@@ -12,6 +12,6 @@ jobs:
         steps:
         - name: Create Issue Branch
           uses: robvanderleek/create-issue-branch@master
+          branchName: '${issue.number}-${issue.title}'
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    branchName: 'CH-1'
