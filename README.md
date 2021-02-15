@@ -6,9 +6,15 @@
 2. npm i
 3. npm run start
 
-Git commit rules
+# Git commit rules
 
 Follow commitlint rules for commiting
+
+## Commitlint types
+
+### Types: [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
+
+git commit command: git commit -m "[types]: message"
 
 # How to Contribute
 
