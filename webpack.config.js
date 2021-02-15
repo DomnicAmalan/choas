@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
-
+// TODO
 const PolyFill = '@babel/polyfill';
 const webpack = require('webpack');
 
