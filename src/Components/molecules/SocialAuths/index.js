@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from 'react';
 import './socialauth.scss';
 import { useTranslation } from 'react-i18next';
 import {
@@ -6,38 +6,39 @@ import {
   faGoogle,
   faFacebookSquare,
   faSnapchatSquare,
-  faTwitterSquare
+  faTwitterSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import { AuthButtons } from '../../atoms/index';
-import "firebase/auth";
-import firebase from "firebase/app";
-import { firebaseConfig } from "../../../config";
+import 'firebase/auth';
+import firebase from 'firebase/app';
+import { firebaseConfig } from '../../../config';
 
-console.log(firebaseConfig)
+console.log(firebaseConfig);
 firebase.initializeApp(firebaseConfig);
 
 const SocialAuths = () => {
   // const {toggle, theme} = useContext(ThemeContext);
   const { t } = useTranslation();
 
-  const googleAuthMethod = useCallback(async() => {
+  const googleAuthMethod = useCallback(async () => {
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
     const userData = await firebase.auth().signInWithPopup(googleAuthProvider);
-    console.log(userData)
-  }
-  )
+    console.log(userData);
+  });
 
-  const facebookAuthMethod = useCallback( async() => {
+  const facebookAuthMethod = useCallback(async () => {
     const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
-    const userData = await firebase.auth().signInWithPopup(facebookAuthProvider);
-    console.log(userData)
-  })
+    const userData = await firebase
+      .auth()
+      .signInWithPopup(facebookAuthProvider);
+    console.log(userData);
+  });
 
-  const twitterAuthMethod = useCallback( async() => {
+  const twitterAuthMethod = useCallback(async () => {
     const twitterAuthProvider = new firebase.auth.TwitterAuthProvider();
     const userData = await firebase.auth().signInWithPopup(twitterAuthProvider);
-    console.log(userData)
-  })
+    console.log(userData);
+  });
 
   return (
     <div className="social-auth-container">
